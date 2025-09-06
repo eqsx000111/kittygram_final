@@ -5,6 +5,13 @@ WORKDIR /app
 RUN apt-get update && apt-get install -y \
     build-essential \
     libyaml-dev \
+    libjpeg-dev \
+    libpng-dev \
+    libtiff-dev \
+    libfreetype6-dev \
+    liblcms2-dev \
+    libwebp-dev \
+    zlib1g-dev \
     && rm -rf /var/lib/apt/lists/*
 
 RUN pip install --upgrade pip setuptools wheel
